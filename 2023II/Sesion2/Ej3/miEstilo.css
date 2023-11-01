@@ -1,0 +1,19 @@
+#info{
+    width: 300px;
+    height: 100px;
+}
+
+#texto{
+    height: 100px;
+    text-align: center;
+}
+
+.ancho{
+    height: 200px;
+    text-align: center;
+}
+
+#cuerpo{
+    padding: 10px;
+    margin: auto;
+}

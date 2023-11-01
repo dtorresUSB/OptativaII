@@ -1,0 +1,33 @@
+h1{
+    color: black;
+    text-align: center;
+    background-color: rgb(129, 183, 178);
+}
+
+form{
+    background-color: coral;
+    width: 400px;
+    padding: 16px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+button{
+    text-align: center;
+    font-weight: bold;
+    background-color: darkslategray;
+    color: beige;
+}
+
+div{
+    text-align: center;    
+}
+
+#usuario{
+    color: rgb(240,0,0);
+} 
+
+.uno{
+    color: rgb(100,0,255);
+    text-align:center;
+}
