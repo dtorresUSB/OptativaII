@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="Fcn_index.js"></script>
+    <link rel="stylesheet" href="miEstilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <table class="table-bordered">
+        <tr>
+            <th>
+                <a href="https://www.usbbog.edu.co">
+                <img src="https://www.usbbog.edu.co/wp-content/uploads/2021/06/logoUSBBOG.png"></a>
+            </th>
+            <td colspan="2">
+                <center>                    
+                    <h1>Universidad de San buenaventura</h1>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <th class="alert alert-primary">
+                <center>
+                    <div>
+                        <p>Botones</p>
+                        <hr>
+                        <button onclick="activar()" class="btn btn-success">Start</button>
+                        <button onclick="desactivar()" class="btn btn-danger">Stop</button>
+                        <br>
+                        <hr>
+                        <button onclick="ejemploDiv()" class="btn btn-primary">Home</button>
+                        <button onclick="borrar()" class="btn btn-warning">Borrar</button>
+                    </div>
+                </center>
+
+            </th>
+
+            <th class="alert alert-info">
+                <center>
+                    <p>Informacion</p>
+                    <hr>
+                    <p>Nombre: <input type="text" id="dato" name="dato"></p>
+                    <button onclick="publicar()" class="btn btn-secondary">Publicar</button>
+                </center>
+            </th>
+            <th class="container alert alert-primary">
+                <center><p>Respuesta</p></center>
+                <hr>
+                <div class="container" id="info" name="info"></div>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3" class="alert alert-dark">
+                <center><p>Ubicacion:</p></center>
+                <hr>
+                <div id="texto" name="texto"></div>
+                <!--Para combinar filas: rowspan-->
+                <!--Para combinar columnas: colspan-->
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!-- AWP_In_Variable Name='"Start"' -->
+<!-- AWP_In_Variable Name='"Stop"' -->
+<!-- AWP_In_Variable Name='"Reset"' -->
+<!-- AWP_Enum_Def Name="listado" Values='0:"PARADO", 1:"CRONOMETRANDO", 2:"PUESTA A CERO"' -->
+
+<!DOCTYPE HTML> 
+<html>
+  <head>
+  <meta http-equiv="Content-Language" content="es" >
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <meta http-equiv="Content-Script-Type" content="text/javascript" >
+  <link rel="stylesheet" type="text/css" href="estilos/estilos.css"/>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" >
+	
+
+	$(document).ready(function() {
+
+		//Actualizamos el contador a tiempos fijos
+		setInterval(actualizar,500);
+
+		// Enviar la información de los botones sin recargar la página.
+
+		$().ajaxStart(function() {
+			$('#loading').show();
+			$('#result').hide();o
+		}).ajaxStop(function() {
+			$('#loading').hide();
+			$('#result').fadeIn('fast');
+		});
+	
+		$('#arranca, #para, #reinicia').submit(function() {
+			$.ajax({
+				type: 'POST',
+				url: $(this).attr('action'),
+				data: $(this).serialize(),
+				success: function(data) {
+					$('#result').html(data);
+
+				}
+			})
+			
+			return false;
+		}); 
+	})  
+
+	function actualizar(){
+	$("#tiempos").load("tiempos.htm");
+	$("#textos").load("texto.htm");
+	}
+
+</script>
+    
+  </head>
+    <title>Cronometro</title>
+
+ <body>
+ 
+ 
+	<div id="ps"><img src="imagenes/ps.png"></img></div>
+	<div id="textos"></div>
+	<div id="tiempos"></div>
+	<div id="botones">
+		<table border="0" >
+					<tr>
+						<td>
+							<form method="post" action="" id="arranca" name="arranca">
+								<input type="submit" value="Start" id="boton">
+								<input type="hidden" name='"Start"' value="1">
+								<input type="hidden" name='"Stop"' value="0">
+							</form>
+						</td>
+						<td>
+							<form method="post" action="" id="para" name="para">
+								<input type="submit" value="Stop" id="boton">
+								<input type="hidden" name='"Stop"' value="1"> 
+								<input type="hidden" name='"Start"' value="0">
+							</form>
+						</td>
+						<td>
+							<form method="post" action="" id="reinicia" name="reinicia">
+								<input type="submit" value="Reset" id="boton">
+								<input type="hidden" name='"Reset"' value="1"> 
+							</form>
+						</td>
+					</tr>
+		</table>
+	</div>
+
+    
+  </body>
+  </body>
+</html>

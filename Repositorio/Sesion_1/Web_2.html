@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="miEstilo.css">
+    <script src = "Persona.js"></script>
+</head>
+<body>
+    <h1>Registro de Usuarios</h1>
+
+    <form onsubmit="return guardar()">
+        <p>Nombre: <input type="text" name="nombre" id="nombre"/></p>
+        <p>Edad: <input type="text" name="edad" id="edad"/></p>
+
+        <p class = "uno">
+            Hombre <input type="radio" name="MASC" id="MASC"/>
+            Mujer <input type="radio" name="FEM" id="FEM"/>
+        </p>
+
+        <p>Usuario: <input type="text"/ name="usuario" id="usuario" required /></p>
+        <p>Contraseña: <input type="password" name="pass" id="pass"required /></p>
+
+        <p><input type="checkbox" name="aceptado" id="aceptado"/>Declaro que he
+        leido y aceptado los terminos y condiciones</p>
+
+        <center><button type="submit">Ingresar</button></center>
+    </form>
+</body>
+</html>

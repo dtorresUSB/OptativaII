@@ -1,0 +1,28 @@
+h1 {
+    color: black;
+    text-align: center;
+    background-color: rgb(112,146,190);
+}
+
+form{
+    background-color: aliceblue;
+    width: 400px;
+    padding: 16px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+button{
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: darkslategray;
+}
+
+.uno{
+    color: brown;
+}
+
+#usuario{
+    color: rgb(24, 134, 117);
+}

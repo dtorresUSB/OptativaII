@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>Mi Hoja de Vida</title>
+
+        <script>
+            function infoper(){
+                var info="<ul>"
+                            +"<li><strong>Tipo de Identificacion:</strong> CC</li>"
+                            +"<li><strong>Identificacion:</strong> 23456778</li>"
+                            +"<li><strong>Nombres:</strong> Roger Stevens</li>"
+                            +"<li><strong>Apellidos:</strong> Hernandez Ariza</li>"
+                            +"<li><strong>Direccion:</strong> Md 34#23-3</li>"
+                            +"<li><strong>Celular:</strong>3456789098789</li>"
+                       +"</ul>";
+
+                $("#d_contenido").html(info);
+
+            }
+
+            ////////////////////////
+            function estu(){
+                var info="<table class='table table-striped table-hover table-bordered'>"
+                  +"<tr>"
+                    + "<th>No</th>"
+                    + "<th>Titulo</th>"
+                    + "<th>Nivel</th>"
+                    + "<th>Lugar</th>"
+                  +"</tr>" 
+                  +"<tr>"
+                    + "<td>1</td>"
+                    + "<td>Bachiller Academico</td>"
+                    + "<td>Secundaria</td>"
+                    + "<td>Loperena</td>"
+                  +"</tr>"
+                  +"<tr>"
+                    + "<th>2</th>"
+                    + "<th>Diseñador Grafico</th>"
+                    + "<th>Tecnico</th>"
+                    + "<th>ITN</th>"
+                  +"</tr>"
+                  +"<tr>"
+                    + "<th>3</th>"
+                    + "<th>Ingeniero de Sistemas</th>"
+                    + "<th>Profesional</th>"
+                    + "<th>UPC</th>"
+                  +"</tr>"    
+                +"</table>";
+
+        $("#d_contenido").html(info);
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <br>
+        <center>
+            <img style="width:15%" src="https://us.123rf.com/450wm/glebstock/glebstock1606/glebstock160600222/59062277-cara-oculta-en-la-persona-de-la-silueta-shadow-male.jpg" />
+            <div class="container alert alert-warning">
+                <button onclick="infoper()" class="btn btn-warning">Informacion Personal</button>
+                <button onclick="estu()" class="btn btn-warning">Estudios</button>
+                <button onclick="laboral()" class="btn btn-warning">Experiencia Laboral</button>
+                <button onclick="contactos()" class="btn btn-warning">Contactos</button>
+            </div>
+        </center>
+
+        <div class="container alert alert-warning" id="d_contenido" name="d_contenido">
+
+        </div>
+
+    </body>
+
+</html>
